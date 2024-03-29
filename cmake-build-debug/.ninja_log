@@ -1,0 +1,6 @@
+# ninja log v5
+3	486	7334048451124508	build.ninja	6672170f53d4f45c
+6	100	7334048453692092	CMakeFiles/projetv1.dir/column.c.obj	7c63498fd589b3f8
+3	94	7334050043934619	CMakeFiles/projetv1.dir/main.c.obj	80aee12284d81cd5
+10	97	7334050043955283	CMakeFiles/projetv1.dir/column.c.obj	7c63498fd589b3f8
+97	372	7334050046666022	projetv1.exe	78e716644eec98c
