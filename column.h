@@ -12,8 +12,9 @@
 typedef struct {
     char *title;
     int *data;
+    int size;
 } column;
 column *create_column(char *title);
-
+int insert_value(column *col, int value);
 
 #endif //PROJETV1_FUNCTIONS_H
