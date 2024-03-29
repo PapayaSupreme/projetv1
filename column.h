@@ -14,7 +14,12 @@ typedef struct {
     int *data;
     int size;
 } column;
+
 column *create_column(char *title);
 int insert_value(column *col, int value);
-
+int nb_occurences(const column *col, int size, int value);
+int value_at_index(const column *col, int index);
+int greater_than(const column *col, int value);
+int less_than(const column *col, int value);
+int same_than(const column *col, int value);
 #endif //PROJETV1_FUNCTIONS_H

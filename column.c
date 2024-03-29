@@ -23,3 +23,61 @@ int insert_value(column *col, int value) {
     return 0;
 }
 
+int nb_occurences(const column *col, int size, int value) {
+    int nb = 0;
+    for (int i = 0; i < size; i++)
+    {
+        if (col->data[i] == value)
+        {
+            nb++;
+        }
+    }
+    return nb;
+}
+
+int value_at_index(const column *col, int index) {
+    if (index >= col->size)
+    {
+        printf("Index out of range\n");
+        return -1;
+    }
+    return col->data[index];
+}
+
+int greater_than(const column *col, int value) {
+    int nb = 0;
+    for (int i = 0; i < col->size; i++)
+    {
+        if (col->data[i] > value)
+        {
+            nb++;
+        }
+    }
+    return nb;
+}
+
+int less_than(const column *col, int value) {
+    int nb = 0;
+    for (int i = 0; i < col->size; i++)
+    {
+        if (col->data[i] < value)
+        {
+            nb++;
+        }
+    }
+    return nb;
+}
+
+int same_than(const column *col, int value) {
+    int nb = 0;
+    for (int i = 0; i < col->size; i++)
+    {
+        if (col->data[i] == value)
+        {
+            nb++;
+        }
+    }
+    return nb;
+}
+
+
