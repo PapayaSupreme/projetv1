@@ -17,6 +17,7 @@ column *create_column(char *title) {
 int insert_value(column *col, int value) {
     if (col->size % REALOC_SIZE == 0) {
         col->data = realloc(col->data, (col->size + REALOC_SIZE) * sizeof(int));
+        col->physical_size += REALOC_SIZE;
     }
     col->data[col->size] = value;
     col->size++;
@@ -78,6 +79,16 @@ int same_than(const column *col, int value) {
         }
     }
     return nb;
+}
+
+void display_column(const column *col) {
+    printf("Column title: %s\n", col->title);
+    printf("Column data: ");
+    for (int i = 0; i < col->size; i++)
+    {
+        printf("%d ", col->data[i]);
+    }
+    printf("\n");
 }
 
 
